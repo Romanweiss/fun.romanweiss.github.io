@@ -1,0 +1,489 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Роман Щербинин - Резюме</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Montserrat:wght@600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <button id="downloadPdfBtn" class="pdf-btn" type="button" aria-label="Скачать PDF">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path
+          d="M12 3v10m0 0 4-4m-4 4-4-4M5 15v3a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3v-3"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.9"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+      <span>Скачать PDF</span>
+    </button>
+
+    <main class="resume-page" id="resumeRoot">
+      <aside class="sidebar">
+        <section class="identity">
+          <div class="avatar-frame">
+            <img
+              src="./assets/profile.jpg"
+              alt="Фото Романа Щербинина"
+              onerror="this.parentElement.classList.add('placeholder'); this.remove();"
+            />
+          </div>
+          <h1>Роман Щербинин</h1>
+          <p class="identity-role">
+            РУКОВОДИТЕЛЬ НАПРАВЛЕНИЯ<br />
+            ЦИФРОВИЗАЦИИ ЛОГИСТИКИ<br />
+            DATA ENGINEER<br />
+            СПЕЦИАЛИСТ ПО АНАЛИТИКЕ<br />
+            ДАННЫХ
+          </p>
+        </section>
+
+        <section class="side-section">
+          <h2>КОНТАКТЫ</h2>
+          <ul class="contact-list">
+            <li>
+              <span class="icon-box">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <rect x="3.5" y="5.5" width="17" height="13" rx="2.2" fill="none" stroke="currentColor" stroke-width="1.7" />
+                  <path d="m4.8 7.2 7.2 5.7 7.2-5.7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+                </svg>
+              </span>
+              <span>romanweib@gmail.com</span>
+            </li>
+            <li>
+              <span class="icon-box">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M5.3 4.6a2.6 2.6 0 0 1 3.2-1.2l2 1a2.6 2.6 0 0 1 1.4 2.8l-.3 2.1a2 2 0 0 0 .6 1.7l.2.2a12.5 12.5 0 0 0 2.4 1.9l.2.1a2 2 0 0 0 1.7.3l2.1-.3a2.6 2.6 0 0 1 2.8 1.4l1 2a2.6 2.6 0 0 1-1.2 3.2l-1 .5a5.5 5.5 0 0 1-4.6.2 22.1 22.1 0 0 1-7-4.8 22.1 22.1 0 0 1-4.8-7 5.5 5.5 0 0 1 .2-4.6z"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+              <span>+7 (925) 055-22-69</span>
+            </li>
+            <li>
+              <span class="icon-box">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M12 3.2a8.6 8.6 0 0 0-7.5 12.8L3.5 20.8l4.9-1.3A8.6 8.6 0 1 0 12 3.2z"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M9.1 9.1c.3-.5.6-.5.9-.4l.8.3c.2.1.3.3.3.5l-.1 1c0 .2 0 .4.2.5l.1.1c.4.5 1 1 1.5 1.3l.1.1c.2.1.3.2.5.1l1-.2c.2 0 .4.1.5.3l.3.8c.1.3.1.6-.4.9l-.5.3c-.7.4-1.5.4-2.2.1a8.5 8.5 0 0 1-3-2.2 8.5 8.5 0 0 1-2.2-3c-.3-.7-.3-1.5.1-2.2l.4-.5z"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.3"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+              <span>+7 (925) 055-22-69</span>
+            </li>
+            <li>
+              <span class="icon-box">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 20s6.3-5.4 6.3-10.5a6.3 6.3 0 0 0-12.6 0C5.7 14.6 12 20 12 20z" fill="none" stroke="currentColor" stroke-width="1.7" />
+                  <circle cx="12" cy="9.4" r="2.2" fill="none" stroke="currentColor" stroke-width="1.7" />
+                </svg>
+              </span>
+              <span>Москва</span>
+            </li>
+            <li>
+              <span class="icon-box">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="m20 4-3.1 15.3c-.2 1-1.2 1.3-2 .8l-4.2-3-2.1 2.1a1 1 0 0 1-1.7-.7v-3.2L18.3 5.8c.4-.3 0-.8-.4-.6L4.8 13.2 2 12.3c-1-.3-1-1.7-.1-2L19 3.7c.5-.2 1.1.2 1 .3z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </span>
+              <span>@Romanweib</span>
+            </li>
+            <li>
+              <span class="icon-box">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    d="M12 2.7a9.7 9.7 0 0 0-3 18.9c.5.1.7-.2.7-.5v-1.9c-2.8.6-3.4-1.2-3.4-1.2a2.7 2.7 0 0 0-1.1-1.5c-.9-.6 0-.6 0-.6a2 2 0 0 1 1.5 1 2.1 2.1 0 0 0 2.9.8 2 2 0 0 1 .6-1.3c-2.2-.3-4.6-1.2-4.6-5A3.9 3.9 0 0 1 6.7 8a3.6 3.6 0 0 1 .1-2.7s.8-.2 2.8 1a9.5 9.5 0 0 1 5 0c2-1.2 2.8-1 2.8-1a3.6 3.6 0 0 1 .1 2.7 3.9 3.9 0 0 1 1 2.7c0 3.9-2.4 4.7-4.7 5 .4.3.7.9.7 1.9v2.8c0 .3.2.6.7.5A9.7 9.7 0 0 0 12 2.7z"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.4"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+              <span>github.com/Romanweiss</span>
+            </li>
+          </ul>
+        </section>
+
+        <section class="side-section">
+          <h2>ЛИЧНЫЕ ДАННЫЕ</h2>
+          <ul class="info-list">
+            <li><span>Дата рождения</span><span>26.06.1988</span></li>
+            <li><span>Семейное положение</span><span>Холост</span></li>
+            <li><span>Командировки / переезд</span><span>Готов</span></li>
+            <li><span>Водительские права</span><span>Категория B</span></li>
+          </ul>
+        </section>
+
+        <section class="side-section">
+          <h2>ТЕХНОЛОГИЧЕСКИЙ СТЕК</h2>
+          <div class="chips">
+            <span>Python</span>
+            <span>SQL</span>
+            <span>PostgreSQL</span>
+            <span>ClickHouse</span>
+            <span>Kafka</span>
+            <span>MongoDB</span>
+            <span>PySpark</span>
+            <span>Airflow</span>
+            <span>Docker</span>
+            <span>Grafana</span>
+            <span>S3 / MinIO</span>
+            <span>Pandas</span>
+            <span>Excel Advanced</span>
+            <span>AI/ML</span>
+            <span>LLM</span>
+          </div>
+        </section>
+
+        <section class="side-section">
+          <h2>ЯЗЫКИ</h2>
+          <ul class="lang-list">
+            <li><span>Русский</span><span>РОДНОЙ</span></li>
+            <li><span>Английский</span><span>B2</span></li>
+            <li><span>Турецкий</span><span>A2</span></li>
+          </ul>
+        </section>
+
+        <section class="side-section side-last">
+          <h2>ИНТЕРЕСЫ</h2>
+          <p>Фотография • Музыка (электрогитара) • Технологии • Путешествия • Силовые тренировки, кардио и растяжка • Чтение: прикладная философия, риск и мышление в условиях неопределённости • Велопоездки</p>
+        </section>
+      </aside>
+
+      <section class="content">
+        <section class="resume-section">
+          <header class="section-header">
+            <span class="section-line" aria-hidden="true"></span>
+            <h2>КРАТКО ОБО МНЕ</h2>
+          </header>
+          <p>
+            Системный специалист, сочетающий опыт операционного бизнеса, аналитики и разработки внутренних цифровых
+            инструментов. Имею практический опыт оптимизации процессов, разработки аналитических систем и автоматизации
+            бизнес-логики. В настоящее время развиваюсь в области Data Engineering и архитектуры обработки данных.
+          </p>
+        </section>
+
+        <section class="resume-section">
+          <header class="section-header">
+            <span class="section-line" aria-hidden="true"></span>
+            <h2>ПРОФЕССИОНАЛЬНЫЙ ПРОФИЛЬ</h2>
+          </header>
+          <div class="quote-box">
+            <p>
+              Специалист в области аналитики данных, цифровизации операционных процессов и автоматизации бизнес-логики.
+              Активно внедряю AI и машинное обучение в решение бизнес-задач. Карьерный путь начинался с операционных и
+              коммерческих ролей, что позволило получить практическое понимание работы бизнеса изнутри. Позже
+              специализация сместилась в сторону логистики, аналитики операционных процессов и автоматизации расчётов.
+            </p>
+          </div>
+          <p>
+            В настоящее время сфокусирован на аналитике данных, автоматизации расчётов, разработке внутренних
+            инструментов с применением AI/ML, цифровизации бизнес-процессов и разработке data pipelines.
+          </p>
+        </section>
+
+        <section class="resume-section">
+          <header class="section-header">
+            <span class="section-line" aria-hidden="true"></span>
+            <h2>ОПЫТ РАБОТЫ</h2>
+          </header>
+
+          <div class="timeline">
+            <article class="timeline-item current">
+              <div class="dot"></div>
+              <div class="timeline-body">
+                <div class="entry-head">
+                  <div>
+                    <h3>Руководитель направления цифровизации логистики</h3>
+                    <p class="company">ООО «АСТ»</p>
+                  </div>
+                  <span class="period">03.2026 — Н.В.</span>
+                </div>
+                <ul>
+                  <li>Формирование направления цифровизации логистики и развитие data-driven подхода в операционных процессах</li>
+                  <li>Анализ операционных и финансовых данных перевозок: рейсы, затраты, сроки и рентабельность</li>
+                  <li>Разработка и внедрение внутренних инструментов для логистов и управленческой команды</li>
+                  <li>Автоматизация обработки данных и управленческой отчётности на Python / SQL / Excel</li>
+                  <li>Участие в выборе и внедрении IT-решений для цифровизации логистической инфраструктуры</li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="timeline-item">
+              <div class="dot"></div>
+              <div class="timeline-body">
+                <div class="entry-head">
+                  <div>
+                    <h3>Data Engineer (Стажировка)</h3>
+                    <p class="company">NOVADATA</p>
+                  </div>
+                  <span class="period">10.2025 — 03.2026</span>
+                </div>
+                <p class="entry-text">Практическая стажировка по Data Engineering и Big Data с реализацией end-to-end проектов:</p>
+                <div class="sub-card">
+                  <ul class="project-list">
+                    <li>
+                      <strong>ProbablyFresh Analytics Platform</strong>
+                      <span>(финальная защита проекта: 9.5 / 10)</span>
+                      <p class="project-link-line">
+                        <a
+                          class="project-link"
+                          href="https://github.com/Romanweiss/Novadata_Internship_10_Final_Challenge"
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          GitHub: Romanweiss/Novadata_Internship_10_Final_Challenge
+                        </a>
+                      </p>
+                      <p>
+                        Построение end-to-end платформы с полным Data Engineering контуром: JSON → MongoDB → Kafka →
+                        ClickHouse RAW → ClickHouse MART → PySpark ETL → S3. Реализованы ingestion, витрины, feature
+                        mart и экспорт результатов в объектное хранилище.
+                      </p>
+                      <p>
+                        Добавлены production-практики: Airflow DAG для ежедневного ETL, Grafana-дашборды и алерты,
+                        managed ingestion/staging слой с batch-статусами, ошибками и replay, smoke-check и контроль
+                        качества данных на MART-уровне.
+                      </p>
+                      <p>
+                        Расширена платформа до control panel уровня: Django + DRF backend API, React UI с one-click
+                        действиями для пайплайна, Data Quality / Exports / Feature Mart разделами, PII-защита через
+                        SHA-256 + salt, выгрузка CSV в S3 и опциональный Parquet через PySpark.
+                      </p>
+                    </li>
+                    <li>
+                      <strong>Streaming pipeline</strong>
+                      <span>(PostgreSQL → Kafka → ClickHouse)</span>
+                      <p>
+                        Разработка producer и consumer сервисов на Python, построение streaming-pipeline обработки
+                        данных, защита от дубликатов и развёртывание инфраструктуры через Docker Compose.
+                      </p>
+                    </li>
+                    <li>
+                      <strong>OLAP аналитика в ClickHouse</strong>
+                      <p>
+                        Разработка аналитической витрины на AggregatingMergeTree, использование Materialized Views,
+                        агрегирующих функций State / Merge и расчёт метрики 7-day retention.
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+
+            <article class="timeline-item">
+              <div class="dot"></div>
+              <div class="timeline-body">
+                <div class="entry-head">
+                  <div>
+                    <h3>Инженер-программист / Специалист по работе с данными</h3>
+                    <p class="company">ООО "АЛЬЯНС ДВ"</p>
+                  </div>
+                  <span class="period">02.2023 — Н.В.</span>
+                </div>
+                <div class="split-grid">
+                  <div>
+                    <h4>ЗАДАЧИ</h4>
+                    <ul>
+                      <li>Анализ логистических и операционных данных: рейсы, себестоимость, простои и отклонения от сроков</li>
+                      <li>Подготовка аналитической отчётности и сводных таблиц для руководства</li>
+                      <li>Автоматизация расчётов и обработки данных для логистов и диспетчеров</li>
+                      <li>Разработка внутренних инструментов и систем на Python / JavaScript / Google Sheets</li>
+                      <li>Структурирование данных и оптимизация логистических процессов на основе аналитики</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4>ДОСТИЖЕНИЯ</h4>
+                    <ul class="achievement-list">
+                      <li>
+                        Автоматизировал расчёты перевозок, сократив ручную обработку данных на 30-40%
+                        <span>Python + SQL + Excel</span>
+                      </li>
+                      <li>
+                        Разработал систему расчёта рентабельности лизингового транспорта для оценки эффективности автопарка
+                        <span>Google Sheets + JavaScript</span>
+                      </li>
+                      <li>
+                        Создал систему оперативной работы логистов и менеджеров для ведения перевозок и контроля операций
+                        <span>Google Sheets + JavaScript</span>
+                      </li>
+                      <li>
+                        Сократил подготовку управленческой отчётности с нескольких часов до 15-20 минут
+                        <span>SQL + Excel + Google Sheets</span>
+                      </li>
+                      <li>
+                        Структурировал данные по перевозкам и затратам, повысив прозрачность логистических процессов
+                        <span>Excel + SQL</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="timeline-item">
+              <div class="dot"></div>
+              <div class="timeline-body">
+                <div class="entry-head">
+                  <div>
+                    <h3>Аналитик операционных данных / Руководитель отдела контейнерных перевозок</h3>
+                    <p class="company">ООО "МАГТРАК"</p>
+                  </div>
+                  <span class="period">2018 — 2022</span>
+                </div>
+                <div class="split-grid">
+                  <div>
+                    <h4>ЗАДАЧИ</h4>
+                    <ul>
+                      <li>Анализ операционных и финансовых данных перевозок: затраты, выручка и рентабельность</li>
+                      <li>Подготовка управленческой отчётности и сводных таблиц для принятия решений</li>
+                      <li>Разработка системы аналитической отчётности для оценки эффективности перевозок</li>
+                      <li>Управление контейнерными перевозками и контроль ключевых операционных показателей</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4>ДОСТИЖЕНИЯ</h4>
+                    <ul>
+                      <li>Создал систему аналитики перевозок в Excel: сводные таблицы, модели расчётов и диаграммы</li>
+                      <li>Разработал инструменты анализа эффективности перевозок для еженедельных, ежемесячных и годовых совещаний</li>
+                      <li>Внедрил регулярную систему анализа рентабельности перевозок и планирования деятельности</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="timeline-item">
+              <div class="dot"></div>
+              <div class="timeline-body">
+                <div class="entry-head">
+                  <div>
+                    <h3>Совместный бизнес по продаже мебели</h3>
+                    <p class="company">ФРАНШИЗА «МЕБЕЛЬВИА»</p>
+                  </div>
+                  <span class="period">2017 — 2018</span>
+                </div>
+                <p class="entry-text">
+                  Открытие и управление мебельными магазинами в Чехове и Подольске. Операционное управление, работа с
+                  поставщиками, финансовый учёт, управление продажами.
+                </p>
+              </div>
+            </article>
+
+            <article class="timeline-item">
+              <div class="dot"></div>
+              <div class="timeline-body">
+                <div class="entry-head">
+                  <div>
+                    <h3>Ранний опыт <span class="muted-inline">(2005 — 2017)</span></h3>
+                  </div>
+                </div>
+                <div class="sub-card">
+                  <div class="entry-head compact">
+                    <div>
+                      <h4 class="card-title">Менеджер по экспорту</h4>
+                      <p class="company">ООО «Колос Экспресс» (Myllyn Paras OY)</p>
+                    </div>
+                    <span class="period">2012 — 2014</span>
+                  </div>
+                  <p>
+                    Развитие экспортных продаж в странах СНГ: Украина, Беларусь, Казахстан, Грузия и Армения.<br />
+                    Координация выхода на новые рынки: переговоры, Incoterms, ассортимент, маркетинговые бюджеты,
+                    адаптация упаковки и маркировки.<br />
+                    Аналитика продаж и ассортимента в Excel; увеличение продаж в Беларуси на 20-30% за счёт расширения
+                    присутствия в сетях и оптимизации ассортимента.
+                  </p>
+                </div>
+                <div class="sub-card">
+                  <h4 class="card-title">ДРУГИЕ ДОЛЖНОСТИ:</h4>
+                  <p>
+                    ПАО Южные Электрические Сети (Электромонтажник) • ЗАО "РТК" (обработка клиентских и операционных
+                    данных в 1С / Excel, контроль качества данных) • ООО МС Транспорт-1 (Менеджер по работе с
+                    клиентами) • АО Петрол Комплекс (Оператор АЗС) • ООО Цифровой Мир (Экспедитор)
+                  </p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="resume-section">
+          <header class="section-header">
+            <span class="section-line" aria-hidden="true"></span>
+            <h2>ОБРАЗОВАНИЕ</h2>
+          </header>
+
+          <article class="education-card">
+            <div class="entry-head">
+              <p class="badge-title">ВТОРОЕ ВЫСШЕЕ</p>
+              <span class="period">2025 — 2028</span>
+            </div>
+            <h3>ИСКУССТВЕННЫЙ ИНТЕЛЛЕКТ И БОЛЬШИЕ ДАННЫЕ</h3>
+            <p class="education-sub">(Прикладная информатика)</p>
+            <hr />
+            <p class="education-point">•&nbsp; Университет «Синерги́я» (Московский финансово-промышленный университет «Синергия»)</p>
+          </article>
+
+          <article class="education-card">
+            <div class="entry-head">
+              <p class="badge-title">ВЫСШЕЕ</p>
+              <span class="period">2013</span>
+            </div>
+            <h3>ФИНАНСОВЫЙ МЕНЕДЖМЕНТ</h3>
+            <p class="education-sub">(Финансы и кредит)</p>
+            <hr />
+            <p class="education-point">•&nbsp; Университет «Синерги́я» (Московский финансово-промышленный университет «Синергия»)</p>
+          </article>
+        </section>
+
+        <section class="resume-section">
+          <header class="section-header">
+            <span class="section-line" aria-hidden="true"></span>
+            <h2>ДОПОЛНИТЕЛЬНОЕ ОБРАЗОВАНИЕ</h2>
+          </header>
+
+          <div class="cert-grid">
+            <article class="cert-card">
+              <h3>Python Web Development</h3>
+              <p>АКАДЕМИЯ TOP</p>
+            </article>
+            <article class="cert-card">
+              <h3>Microsoft Excel Advanced</h3>
+              <p>УЧЕБНЫЙ ЦЕНТР «СПЕЦИАЛИСТ»</p>
+            </article>
+            <article class="cert-card">
+              <h3>Stepik</h3>
+              <p>PYTHON, SQL, GIT, АЛГОРИТМЫ</p>
+            </article>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
