@@ -117,7 +117,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 12px;
   color: #5f6672;
   font-size: 14px;
   font-weight: 600;
@@ -125,8 +125,8 @@ body {
 }
 
 .footer-glyph {
-  width: 18px;
-  height: 18px;
+  width: 36px;
+  height: 36px;
   object-fit: contain;
   opacity: 0.9;
 }
@@ -832,8 +832,8 @@ body {
   }
 
   .footer-glyph {
-    width: 16px;
-    height: 16px;
+    width: 32px;
+    height: 32px;
   }
 
   .sidebar {
