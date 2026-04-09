@@ -103,12 +103,58 @@ body {
 .resume-page {
   max-width: 1480px;
   margin: 40px auto 0;
+  position: relative;
   display: grid;
   grid-template-columns: 430px 1fr;
   background: var(--paper);
   border: 1px solid #d3d3d3;
   border-radius: 24px;
   overflow: hidden;
+}
+
+.github-corner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 8;
+  display: block;
+  line-height: 0;
+  color: #ffffff;
+  fill: #0f1115;
+}
+
+.github-corner svg {
+  display: block;
+  width: 86px;
+  height: 86px;
+  transform: scaleX(-1);
+  transform-origin: center;
+}
+
+.github-corner .octo-arm {
+  transform-origin: 130px 106px;
+}
+
+.github-corner:hover .octo-arm,
+.github-corner:focus-visible .octo-arm {
+  animation: octocat-wave 560ms ease-in-out;
+}
+
+@keyframes octocat-wave {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+
+  20%,
+  60% {
+    transform: rotate(-25deg);
+  }
+
+  40%,
+  80% {
+    transform: rotate(10deg);
+  }
 }
 
 .resume-page,
@@ -682,6 +728,11 @@ body {
     grid-template-columns: 370px 1fr;
   }
 
+  .github-corner svg {
+    width: 78px;
+    height: 78px;
+  }
+
   .sidebar {
     padding: 30px 28px 28px;
   }
@@ -851,6 +902,11 @@ body {
     border-radius: 16px;
   }
 
+  .github-corner svg {
+    width: 72px;
+    height: 72px;
+  }
+
   .page-footer {
     margin-top: 14px;
     font-size: 13px;
@@ -968,6 +1024,11 @@ body {
   .resume-page {
     margin-top: 12px;
     border-radius: 14px;
+  }
+
+  .github-corner svg {
+    width: 64px;
+    height: 64px;
   }
 
   .sidebar {
@@ -1136,6 +1197,16 @@ body {
   }
 }
 
+@media (hover: none) and (pointer: coarse) {
+  .github-corner:hover .octo-arm {
+    animation: none;
+  }
+
+  .github-corner:active .octo-arm {
+    animation: octocat-wave 560ms ease-in-out;
+  }
+}
+
 @media print {
   @page {
     size: A4;
@@ -1159,6 +1230,10 @@ body {
   }
 
   .page-footer {
+    display: none !important;
+  }
+
+  .github-corner {
     display: none !important;
   }
 
