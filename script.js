@@ -210,6 +210,10 @@ const funDecorations = [
   { emoji: "🐬", side: "left", offset: "52px", size: "28px", delay: "-1.8s", duration: "19s", drift: "15px" },
   { emoji: "🍭", side: "left", offset: "20px", size: "24px", delay: "-7.7s", duration: "14s", drift: "11px" },
   { emoji: "🍌", side: "left", offset: "46px", size: "24px", delay: "-4.1s", duration: "16s", drift: "13px" },
+  { emoji: "🐷", side: "left", offset: "30px", size: "26px", delay: "-5.8s", duration: "17s", drift: "14px" },
+  { emoji: "🐮", side: "left", offset: "58px", size: "26px", delay: "-2.9s", duration: "18s", drift: "12px" },
+  { emoji: "🐐", side: "left", offset: "12px", size: "25px", delay: "-8.6s", duration: "16s", drift: "16px" },
+  { emoji: "🌟", side: "left", offset: "40px", size: "24px", delay: "-10.8s", duration: "15s", drift: "10px" },
   { emoji: "🍬", side: "right", offset: "10px", size: "24px", delay: "-2.6s", duration: "13s", drift: "-10px" },
   { emoji: "🐥", side: "right", offset: "26px", size: "28px", delay: "-8.2s", duration: "16s", drift: "-14px" },
   { emoji: "🦄", side: "right", offset: "44px", size: "30px", delay: "-5.5s", duration: "18s", drift: "-16px" },
@@ -218,6 +222,10 @@ const funDecorations = [
   { emoji: "🐬", side: "right", offset: "54px", size: "28px", delay: "-3.4s", duration: "19s", drift: "-15px" },
   { emoji: "🍭", side: "right", offset: "22px", size: "24px", delay: "-9.1s", duration: "14s", drift: "-11px" },
   { emoji: "🍌", side: "right", offset: "48px", size: "24px", delay: "-6.1s", duration: "16s", drift: "-13px" },
+  { emoji: "🐷", side: "right", offset: "32px", size: "26px", delay: "-5.1s", duration: "17s", drift: "-14px" },
+  { emoji: "🐮", side: "right", offset: "60px", size: "26px", delay: "-2.1s", duration: "18s", drift: "-12px" },
+  { emoji: "🐐", side: "right", offset: "14px", size: "25px", delay: "-7.8s", duration: "16s", drift: "-16px" },
+  { emoji: "🌟", side: "right", offset: "42px", size: "24px", delay: "-11.3s", duration: "15s", drift: "-10px" },
 ];
 
 function initializeFunRain() {
