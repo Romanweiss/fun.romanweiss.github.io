@@ -1,6 +1,20 @@
 const downloadBtn = document.getElementById("downloadPdfBtn");
 const langButtons = Array.from(document.querySelectorAll(".lang-btn"));
+const specialSwitch = document.querySelector(".special-switch");
+const specialModeBtn = document.getElementById("volodyaModeBtn");
+const profileImage = document.getElementById("profileImage");
+const funRain = document.getElementById("funRain");
+const resumeRoot = document.getElementById("resumeRoot");
+const funPasswordModal = document.getElementById("funPasswordModal");
+const funPasswordInput = document.getElementById("funPasswordInput");
+const funPasswordSubmitBtn = document.getElementById("funPasswordSubmitBtn");
+const funPasswordCancelBtn = document.getElementById("funPasswordCancelBtn");
 const storageKey = "resume-language";
+const funPassword = "02041987";
+const defaultProfileSrc = profileImage?.getAttribute("src") || "";
+const funProfileSrc = "./assets/fun.jpg";
+
+let funModeActive = false;
 
 const baseTranslations = {
   text: {},
@@ -187,6 +201,104 @@ const translations = {
   },
 };
 
+const funDecorations = [
+  { emoji: "🍬", side: "left", offset: "8px", size: "24px", delay: "-1.2s", duration: "13s", drift: "10px" },
+  { emoji: "🐥", side: "left", offset: "24px", size: "28px", delay: "-6.5s", duration: "16s", drift: "14px" },
+  { emoji: "🦄", side: "left", offset: "42px", size: "30px", delay: "-3.2s", duration: "18s", drift: "16px" },
+  { emoji: "🐱", side: "left", offset: "14px", size: "26px", delay: "-9.4s", duration: "15s", drift: "12px" },
+  { emoji: "🐶", side: "left", offset: "34px", size: "26px", delay: "-11.1s", duration: "17s", drift: "18px" },
+  { emoji: "🐬", side: "left", offset: "52px", size: "28px", delay: "-1.8s", duration: "19s", drift: "15px" },
+  { emoji: "🍭", side: "left", offset: "20px", size: "24px", delay: "-7.7s", duration: "14s", drift: "11px" },
+  { emoji: "🍌", side: "left", offset: "46px", size: "24px", delay: "-4.1s", duration: "16s", drift: "13px" },
+  { emoji: "🍬", side: "right", offset: "10px", size: "24px", delay: "-2.6s", duration: "13s", drift: "-10px" },
+  { emoji: "🐥", side: "right", offset: "26px", size: "28px", delay: "-8.2s", duration: "16s", drift: "-14px" },
+  { emoji: "🦄", side: "right", offset: "44px", size: "30px", delay: "-5.5s", duration: "18s", drift: "-16px" },
+  { emoji: "🐱", side: "right", offset: "18px", size: "26px", delay: "-10.4s", duration: "15s", drift: "-12px" },
+  { emoji: "🐶", side: "right", offset: "36px", size: "26px", delay: "-12.3s", duration: "17s", drift: "-18px" },
+  { emoji: "🐬", side: "right", offset: "54px", size: "28px", delay: "-3.4s", duration: "19s", drift: "-15px" },
+  { emoji: "🍭", side: "right", offset: "22px", size: "24px", delay: "-9.1s", duration: "14s", drift: "-11px" },
+  { emoji: "🍌", side: "right", offset: "48px", size: "24px", delay: "-6.1s", duration: "16s", drift: "-13px" },
+];
+
+function initializeFunRain() {
+  if (!funRain || funRain.children.length) {
+    return;
+  }
+
+  funDecorations.forEach((item) => {
+    const element = document.createElement("span");
+    element.className = `fun-item ${item.side}`;
+    element.textContent = item.emoji;
+    element.style.setProperty("--offset", item.offset);
+    element.style.setProperty("--size", item.size);
+    element.style.setProperty("--delay", item.delay);
+    element.style.setProperty("--duration", item.duration);
+    element.style.setProperty("--drift", item.drift);
+    funRain.appendChild(element);
+  });
+}
+
+function syncSpecialSwitchPosition() {
+  if (!specialSwitch || !resumeRoot) {
+    return;
+  }
+
+  const rootRect = resumeRoot.getBoundingClientRect();
+  const left = Math.max(8, Math.round(rootRect.left));
+  specialSwitch.style.left = `${left}px`;
+}
+
+function setFunMode(isActive) {
+  funModeActive = isActive;
+  document.body.classList.toggle("fun-mode", isActive);
+
+  if (specialModeBtn) {
+    specialModeBtn.classList.toggle("active", isActive);
+    specialModeBtn.setAttribute("aria-pressed", String(isActive));
+  }
+
+  if (profileImage && defaultProfileSrc) {
+    profileImage.setAttribute("src", isActive ? funProfileSrc : defaultProfileSrc);
+  }
+}
+
+function openFunModal() {
+  if (!funPasswordModal) {
+    return;
+  }
+
+  funPasswordModal.hidden = false;
+
+  if (funPasswordInput) {
+    funPasswordInput.value = "";
+    window.setTimeout(() => funPasswordInput.focus(), 0);
+  }
+}
+
+function closeFunModal() {
+  if (!funPasswordModal) {
+    return;
+  }
+
+  funPasswordModal.hidden = true;
+}
+
+function submitFunPassword() {
+  const password = funPasswordInput?.value ?? "";
+
+  if (password !== funPassword) {
+    window.alert("Введите верный пароль!");
+    if (funPasswordInput) {
+      funPasswordInput.focus();
+      funPasswordInput.select();
+    }
+    return;
+  }
+
+  closeFunModal();
+  setFunMode(true);
+}
+
 function collectBaseTranslations() {
   document.querySelectorAll("[data-i18n]").forEach((element) => {
     const key = element.dataset.i18n;
@@ -266,12 +378,65 @@ function applyLanguage(lang) {
 }
 
 collectBaseTranslations();
+initializeFunRain();
+syncSpecialSwitchPosition();
 
 if (downloadBtn) {
   downloadBtn.addEventListener("click", () => {
     window.print();
   });
 }
+
+if (specialModeBtn) {
+  const handleSpecialModeClick = () => {
+    if (funModeActive) {
+      setFunMode(false);
+      return;
+    }
+
+    openFunModal();
+  };
+
+  specialModeBtn.addEventListener("click", handleSpecialModeClick);
+  window.handleVolodyaModeClick = handleSpecialModeClick;
+}
+
+if (funPasswordSubmitBtn) {
+  funPasswordSubmitBtn.addEventListener("click", submitFunPassword);
+}
+
+if (funPasswordCancelBtn) {
+  funPasswordCancelBtn.addEventListener("click", closeFunModal);
+}
+
+if (funPasswordModal) {
+  funPasswordModal.addEventListener("click", (event) => {
+    const target = event.target;
+    if (target instanceof HTMLElement && target.dataset.closeFunModal === "true") {
+      closeFunModal();
+    }
+  });
+}
+
+if (funPasswordInput) {
+  funPasswordInput.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+      submitFunPassword();
+    }
+
+    if (event.key === "Escape") {
+      closeFunModal();
+    }
+  });
+}
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && funPasswordModal && !funPasswordModal.hidden) {
+    closeFunModal();
+  }
+});
+
+window.addEventListener("resize", syncSpecialSwitchPosition);
 
 langButtons.forEach((button) => {
   button.addEventListener("click", () => {

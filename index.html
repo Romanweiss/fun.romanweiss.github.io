@@ -55,6 +55,36 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
+    <div class="special-switch">
+      <button id="volodyaModeBtn" class="special-mode-btn" type="button" aria-pressed="false">
+        Для Володи Иванова
+      </button>
+    </div>
+
+    <div class="fun-modal" id="funPasswordModal" hidden>
+      <div class="fun-modal__backdrop" data-close-fun-modal="true"></div>
+      <div class="fun-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="funPasswordTitle">
+        <h2 id="funPasswordTitle">Секретный доступ</h2>
+        <p>Введите пароль для шуточной темы</p>
+        <input
+          id="funPasswordInput"
+          class="fun-modal__input"
+          type="password"
+          inputmode="numeric"
+          autocomplete="off"
+          placeholder="Пароль"
+        />
+        <div class="fun-modal__actions">
+          <button id="funPasswordCancelBtn" class="fun-modal__btn fun-modal__btn--ghost" type="button">
+            Отмена
+          </button>
+          <button id="funPasswordSubmitBtn" class="fun-modal__btn" type="button">
+            Открыть
+          </button>
+        </div>
+      </div>
+    </div>
+
     <div class="top-controls">
       <button id="downloadPdfBtn" class="pdf-btn" type="button" aria-label="Скачать PDF" data-i18n-attr="aria-label:downloadPdfLabel">
         <svg viewBox="0 0 24 24" aria-hidden="true">
@@ -99,11 +129,12 @@
       </a>
       <aside class="sidebar">
         <section class="identity">
-          <div class="avatar-frame">
-              <img
-                src="./assets/profile.jpg"
-                alt="Фото Романа Щербинина"
-                data-i18n-attr="alt:profileAlt"
+            <div class="avatar-frame">
+                <img
+                  id="profileImage"
+                  src="./assets/profile.jpg"
+                  alt="Фото Романа Щербинина"
+                  data-i18n-attr="alt:profileAlt"
                 onerror="this.parentElement.classList.add('placeholder'); this.remove();"
               />
           </div>
@@ -574,6 +605,8 @@
         </svg>
       </a>
     </main>
+
+    <div class="fun-rain" id="funRain" aria-hidden="true"></div>
 
     <footer class="page-footer">
       <img
