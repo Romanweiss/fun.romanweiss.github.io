@@ -129,6 +129,16 @@ body {
   height: 86px;
 }
 
+.github-corner-bottom {
+  top: auto;
+  bottom: 0;
+}
+
+.github-corner-bottom svg {
+  transform: scaleY(-1);
+  transform-origin: center;
+}
+
 .github-corner path:first-of-type {
   fill: #0f1115;
 }
