@@ -115,7 +115,8 @@ body {
 .github-corner {
   position: absolute;
   top: 0;
-  left: 0;
+  right: 0;
+  left: auto;
   z-index: 8;
   display: block;
   line-height: 0;
@@ -126,8 +127,6 @@ body {
   display: block;
   width: 86px;
   height: 86px;
-  transform: scaleX(-1);
-  transform-origin: center;
 }
 
 .github-corner path:first-of-type {
